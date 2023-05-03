@@ -1,3 +1,23 @@
+<?php
+
+include("../../bd.php");
+
+if($_POST){
+    print_r($_POST);
+
+    //Recolectamos los datos del POST
+    $nombredelpuesto=(isset($_POST["nombredelpuesto"])?$_POST["nombredelpuesto"]:"");
+    //Preparar la insercion de los dartos
+    $sentencia=$conexion>prepare("INSERT INTO tbl_puestos(id,nombredelpuesto) 
+                VALUES (null, :nombredelpuesto)");
+
+    $sentencia->bindParam(":nombredelpuesto", $nombredelpuesto);
+    $sentencia->execute();
+    header("Location:index.php");
+}
+
+?>
+
 <?php include("../../templates/header.php"); ?>
 <br/>
 

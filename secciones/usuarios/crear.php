@@ -1,3 +1,28 @@
+<?php
+
+include("../../bd.php");
+
+if($_POST){
+
+
+    //Recolectamos los datos del POST
+    $usuario=(isset($_POST["usuario"])?$_POST["usuario"]:"");
+    $password=(isset($_POST["password"])?$_POST["password"]:"");
+    $correo=(isset($_POST["correo"])?$_POST["correo"]:"");
+
+    //Preparar la insercion de los dartos
+    $sentencia=$conexion>prepare("INSERT INTO tbl_usuarios(id,usuario,password,correo) 
+                VALUES (null,:usuario,:password,:correo)");
+    $sentencia->bindParam(":usuario", $usuario);
+    $sentencia->bindParam(":password", $password);
+    $sentencia->bindParam(":correo", $correo);
+    $sentencia->execute();
+    header("Location:index.php");
+}
+
+?>
+
+
 <?php include("../../templates/header.php"); ?>
 <br/>
 

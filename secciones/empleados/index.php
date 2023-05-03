@@ -1,3 +1,15 @@
+<?php
+
+include("../../bd.php");
+
+
+$sentencia=$conexion->prepare("SELECT * FROM `tbl_empleados`");
+sentencia->execute();
+$lista_tbl_empleados=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
 <?php include("../../templates/header.php"); ?>
   <br/>
 
@@ -16,6 +28,7 @@
             <table class="table table-primary">
                 <thead>
                     <tr>
+                        <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Foto</th>
                         <th scope="col">CV</th>
@@ -25,7 +38,11 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                <?php foreach ($lista_tbl_empleados as $registro) { ?>
+
                     <tr class="">
+                    <td><?php echo $registro['id']; ?></td>
                         <td scope="row">Daniel R</td>
                         <td>imagen.jpg</td>
                         <td>CV.PDF</td>
@@ -36,6 +53,8 @@
                             <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
                         </td>
                     </tr>
+
+                    <?php  } ?>
                 </tbody>
             </table>
         </div>
