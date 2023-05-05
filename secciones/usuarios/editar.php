@@ -86,8 +86,8 @@ if($_POST){
     <div class="mb-3">
       <label for="correo" class="form-label">Correo:</label>
       <input type="email"
-      <?php echo $correo;?>
-        class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Escriba su correo">
+        value="<?php echo $correo;?>"
+     class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Escriba su correo">
     </div>
 
     <button type="submit" class="btn btn-success">Agregar</button>

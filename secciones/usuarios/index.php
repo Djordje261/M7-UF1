@@ -6,7 +6,7 @@ if(isset( $_GET['txtID'])) {
 
     $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
 
-    $sentencia=$conexion>prepare("DELETE FROM tbl_usuarios WHERE id=:id");
+    $sentencia=$conexion->prepare("DELETE FROM tbl_usuarios WHERE id=:id");
     $sentencia->bindParam(":id", $txtID);
     $sentencia->execute();
     
