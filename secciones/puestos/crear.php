@@ -8,8 +8,9 @@ if($_POST){
     //Recolectamos los datos del POST
     $nombredelpuesto=(isset($_POST["nombredelpuesto"])?$_POST["nombredelpuesto"]:"");
     //Preparar la insercion de los dartos
-    $sentencia=$conexion>prepare("INSERT INTO tbl_puestos(id,nombredelpuesto) 
-                VALUES (null, :nombredelpuesto)");
+    $sentencia = $conexion->prepare("INSERT INTO tbl_puestos(id,nombredelpuesto) 
+            VALUES (null, :nombredelpuesto)");
+
 
     $sentencia->bindParam(":nombredelpuesto", $nombredelpuesto);
     $sentencia->execute();
