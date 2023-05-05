@@ -15,7 +15,7 @@ if(isset( $_GET['txtID'])) {
 }
 
 $sentencia=$conexion->prepare("SELECT * FROM `tbl_usuarios`");
-sentencia->execute();
+$sentencia->execute();
 $lista_tbl_usuarios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -52,7 +52,7 @@ $lista_tbl_usuarios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
                     <td> ....</td>
                     <td><?php echo $registro['correo']; ?></td>
                     <td>
-                     <a class= "btn btn-info" href="index.php?txtID=<?php echo $registro['id'];?>" role="button">Editar</a>
+                     <a class= "btn btn-info" href="editar.php?txtID=<?php echo $registro['id'];?>" role="button">Editar</a>
 
                      <a class= "btn btn-danger" href="index.php?txtID=<?php echo $registro['id'];?>" role="button">Eliminar</a>
                     
