@@ -11,7 +11,7 @@ if($_POST){
     $correo=(isset($_POST["correo"])?$_POST["correo"]:"");
 
     //Preparar la insercion de los dartos
-    $sentencia=$conexion>prepare("INSERT INTO tbl_usuarios(id,usuario,password,correo) 
+    $sentencia=$conexion->prepare("INSERT INTO tbl_usuarios(id,usuario,password,correo) 
                 VALUES (null,:usuario,:password,:correo)");
     $sentencia->bindParam(":usuario", $usuario);
     $sentencia->bindParam(":password", $password);
