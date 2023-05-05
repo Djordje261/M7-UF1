@@ -7,7 +7,7 @@ if(isset( $_GET['txtID'])) {
     $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
 
 
-    $sentencia=$conexion>prepare("SELECT * FROM tbl_puestos WHERE id=:id");
+    $sentencia=$conexion->prepare("SELECT * FROM tbl_puestos WHERE id=:id");
     $sentencia->bindParam(":id", $txtID);
     $sentencia->execute();
     $registro=$sentencia->fetch(PDO::FETCH_LAZY);
@@ -23,14 +23,12 @@ if($_POST){
     $txtID=(isset($_POST['txtID']))?$_POST['txtID']:"";
     $nombredelpuesto=(isset($_POST["nombredelpuesto"])?$_POST["nombredelpuesto"]:"");
     //Preparar la insercion de los dartos
-    $sentencia=$conexion>prepare("UPDATE tbl_puestos SET nombredelpuesto=:nombredelpuesto WHERE id=:id");
+    $sentencia=$conexion->prepare("UPDATE tbl_puestos SET nombredelpuesto=:nombredelpuesto WHERE id=:id");
     $sentencia->bindParam(":nombredelpuesto", $nombredelpuesto);
     $sentencia->bindParam(":id", $txtID);
     $sentencia->execute();
     header("Location:index.php");
 }
-
-
 ?>
 
 
@@ -62,7 +60,7 @@ if($_POST){
         class="form-control" name="nombredelpuesto" id="nombredelpuesto" aria-describedby="helpId" placeholder="Nombre del puesto">
     </div>
 
-    <button type="submit" class="btn btn-sucess">Actualizar</button>
+    <button type="submit" class="btn btn-success">Actualizar</button>
     <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
 
     </form>
