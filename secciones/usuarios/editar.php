@@ -7,7 +7,7 @@ if(isset( $_GET['txtID'])) {
     $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
 
 
-    $sentencia=$conexion>prepare("SELECT * FROM tbl_usuarios WHERE id=:id");
+    $sentencia=$conexion->prepare("SELECT * FROM tbl_usuarios WHERE id=:id");
     $sentencia->bindParam(":id", $txtID);
     $sentencia->execute();
 
@@ -29,7 +29,7 @@ if($_POST){
     $correo=(isset($_POST["correo"])?$_POST["correo"]:"");
 
     //Preparar la insercion de los dartos
-    $sentencia=$conexion>prepare("UPDATE tbl_usuarios 
+    $sentencia=$conexion->prepare("UPDATE tbl_usuarios 
     SET usuario=:usuario,
     password=:password,
     correo=:correo
@@ -90,7 +90,7 @@ if($_POST){
         class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Escriba su correo">
     </div>
 
-    <button type="submit" class="btn btn-sucess">Agregar</button>
+    <button type="submit" class="btn btn-success">Agregar</button>
     <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
 
     </form>
