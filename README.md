@@ -8,6 +8,7 @@
 **Resumen**: Hemos desarrollado una pagina web donde podremos gestionar los trabajadores de una empresa
 
 **Creadores**: Daniel Requena Lavado y Djordje  Minakovic
+
 **DIAGRAMA ENTIDAD RELACIÓN**
 ![Diagrama de clases](diagrama_E-R.png)
 
