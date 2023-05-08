@@ -10,7 +10,7 @@ WHERE usuario=:usuario AND password=:password");
 
 
 $usuario=$_POST["usuario"];
-$usuario=$_POST["contrasenia"];
+$contrasenia=$_POST["contrasenia"];
 
 $sentencia->bindParam(":usuario", $usuario);
 $sentencia->bindParam(":password", $contrasenia);
@@ -19,7 +19,7 @@ $sentencia->bindParam(":password", $contrasenia);
 
 $sentencia->execute();
 $registro=$sentencia->fetch(PDO::FETCH_LAZY);
-if($registro["n_usuario"]<0){
+if($registro["n_usuario"]>0){
     $_SESSIONS['usuario']=$registro["usuario"];
     $_SESSIONS['logueado']=true;
     header("Location:index.php"); 
