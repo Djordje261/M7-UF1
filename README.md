@@ -13,4 +13,5 @@
 ![Diagrama de clases](PHOTO-2023-05-05-22-17-02.jpg)
 
 **MODELO RELACIONAL**
+
 ![Model](model.jpg)
