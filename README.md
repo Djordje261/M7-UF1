@@ -19,6 +19,6 @@
 - **Empleados** ( id,primernombre,segundonombre,primerapellido,segundoapellido,foto,cv,idpuesto,fechadeingreso ).
 Donde id és llave forana de Empleados.
 - **Usuarios** (id,usuario,password,correo).
-- Donde id és llave forana de Usuarios.
+Donde id és llave forana de Usuarios.
 - **Puestos** ( id, nombredelpuesto).
 Donde id és llave forana de Puestos.
