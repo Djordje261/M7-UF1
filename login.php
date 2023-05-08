@@ -10,10 +10,10 @@ WHERE usuario=:usuario AND password=:password");
 
 
 $usuario=$_POST["usuario"];
-$usuario=$_POST["contrasenia"];
+$contrasenia=$_POST["contrasenia"];
 
 $sentencia->bindParam(":usuario", $usuario);
-$contrasenia->bindParam(":password", $contrasenia);
+$sentencia->bindParam(":password", $contrasenia);
 
 
 
