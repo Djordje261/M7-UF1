@@ -10,6 +10,6 @@
 **Creadores**: Daniel Requena Lavado y Djordje  Minakovic
 
 **DIAGRAMA ENTIDAD RELACIÓN**
-![Diagrama de clases](diagrama_E-R.png)
+![Diagrama de clases](PHOTO-2023-05-05-22-17-02.jpg)
 
 **MODELO RELACIONAL**
