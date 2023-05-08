@@ -13,12 +13,3 @@
 ![Diagrama de clases](diagrama_E-R.png)
 
 **MODELO RELACIONAL**
-- **Campeón** ( id_campeon, id_usuario,nivel,ataque,armadura,vida, nombre).
-Donde ,id_usuario,és llave forana de Campeón.
-- **Usuario** (id_usuario, nombre_cuenta,contrasenya).
-- **Posee** ( id_posee, id_habilidad, id_campeón).
-Donde id_habilidad és llave forana de Habilidades.
-Donde id_campeón és llave forana de Campeón.
-- **Habilidades** ( id_habilidad,nombre,descripción,id_tipo_habilidad).
-Donde id_tipo_habilidad és llave forana de Habilidad.
-- **Tipo_habilidad** (id_tipoDeHabilidad, tipo).
