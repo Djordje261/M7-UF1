@@ -37,7 +37,7 @@ if($_POST){
         class="form-control" name="nombredelpuesto" id="nombredelpuesto" aria-describedby="helpId" placeholder="Nombre del puesto">
     </div>
 
-    <button type="submit" class="btn btn-sucess">Agregar</button>
+    <button type="submit" class="btn btn-success">Agregar</button>
     <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
 
     </form>
