@@ -17,9 +17,8 @@
 ![Model](model.jpg)
 
 - **Empleados** ( id,primernombre,segundonombre,primerapellido,segundoapellido,foto,cv,idpuesto,fechadeingreso ).
-Donde ,id_usuario,és llave forana de Campeón.
+Donde id és llave forana de Empleados.
 - **Usuarios** (id,usuario,password,correo).
+- Donde id és llave forana de Usuarios.
 - **Puestos** ( id, nombredelpuesto).
-Donde idés llave forana de Empleados.
-Donde id és llave forana de Usuarios.
 Donde id és llave forana de Puestos.
