@@ -13,13 +13,13 @@ $usuario=$_POST["usuario"];
 $usuario=$_POST["contrasenia"];
 
 $sentencia->bindParam(":usuario", $usuario);
-$sentencia->bindParam(":password", $contrasenia);
+$contrasenia->bindParam(":password", $contrasenia);
 
 
 
 $sentencia->execute();
 $registro=$sentencia->fetch(PDO::FETCH_LAZY);
-if($registro["n_usuario"]<0){
+if($registro["n_usuario"] > 0){
     $_SESSIONS['usuario']=$registro["usuario"];
     $_SESSIONS['logueado']=true;
     header("Location:index.php"); 
